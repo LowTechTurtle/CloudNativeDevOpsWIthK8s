@@ -1,0 +1,1 @@
+module github.com/LowTechTurtle/CloudNativeDevOpsWIthK8s/intro_manifest

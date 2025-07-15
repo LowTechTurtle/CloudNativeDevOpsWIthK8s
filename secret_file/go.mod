@@ -1,0 +1,1 @@
+module github.com/lowtechturtle/CloudNativeDevOpsWithK8s/secret_file

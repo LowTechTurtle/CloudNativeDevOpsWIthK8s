@@ -28,5 +28,5 @@ func main() {
 		log.Fatalf("failed to parse config file %q: %v", cfgPath, err)
 	}
 	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe(":8888", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }

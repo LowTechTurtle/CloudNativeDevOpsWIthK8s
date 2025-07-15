@@ -14,17 +14,15 @@ spec:
     spec:
       containers:
         - name:  demo
-          image: cloudnatived/demo:hello-config-file
+          image: lowtechturtle/turtlek8senv:secretfile
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           volumeMounts:
-          - mountPath: /config/
-            name: demo-config-volume
+          - mountPath: /secrets/
+            name: demo-secret-volume
             readOnly: true
       volumes:
-      - name: demo-config-volume
-        configMap:
-          name: demo-config
-          items:
-          - key: config
-            path: demo.yaml
+      - name: demo-secret-volume
+        secret:
+          secretName: turtle-secret
